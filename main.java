@@ -174,7 +174,10 @@ public class MyDreamDiary
                 print_Message( flag );          // OOps Something went Wrong //
             }
         }
+    
     }   // main end    
+
+// ------------------------------------ Github Uploaded Part 1 Ended ------------------------------------//
 
     public static int display_Rights_Of_User() {// After Login - User Will See -.- This menu
                                                 // For Logout Return 'any num' != 3
@@ -296,13 +299,15 @@ public class MyDreamDiary
                                     
                                     String homeDir = System.getProperty("user.home");
                                     String fileSep = System.getProperty("file.separator");
-                                    String finalPath = homeDir + fileSep + "My_Dream_Diary__Shubham"+ fileSep;          
+                                    String finalPath = homeDir + fileSep + "My_Dream_Diary__Shubham"+ fileSep;
 
                                     File fp = new File ( finalPath + "shubh_MyDreamDiary_"+ uname +"_File.txt" );
+                                    FileWriter fw = new FileWriter( fp, false );
                                     if( fp.exists() )
-                                    {                                        
-                                        fp.delete();
-                                        print_GraceFully("\n|=================== Notes Deleted ==================|\n");                                        
+                                    {
+                                        fw.write("");
+                                        print_GraceFully("\n|=================== Notes Deleted ==================|\n");
+                                        // System.out.println("\npath = "+finalPath + "shubh_MyDreamDiary_"+ uname +"_File.txt");
                                     }
                                     else
                                     {
